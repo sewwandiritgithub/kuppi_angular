@@ -1,0 +1,105 @@
+
+.signup {
+    background: #fff;
+    width: 500px;
+    margin: 65px auto;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        flex-direction: column;
+    border-radius: 4px;
+    box-shadow: 0 2px 25px rgba(0, 0, 0, 0.2);
+}
+.signup h1 {
+    padding: 35px 25px 0 20px;
+    font-weight: 100;
+    
+}
+.signup h4 {
+    padding: 20px 20px 15px 40px;
+    font-weight: 200;
+    font-weight: 200;
+}
+
+.signup .abc {
+    padding: 35px;
+    text-align: left;
+}
+
+.signup .sss{
+    padding: 12px 5px;
+}
+
+.signup .sss input {
+    font-size: 16px;
+    display: block;
+    font-family: 'Rubik', sans-serif;
+    width: 100%;
+    padding: 10px 1px;
+    border: 0;
+    border-bottom: 1px solid #778899;
+    outline: none;
+    -webkit-transition: all .2s;
+    transition: all .2s;
+}
+
+.signup .sss input::-webkit-input-placeholder {
+    text-transform: uppercase;
+}
+
+.signup .sss input::-moz-placeholder {
+    text-transform: uppercase;
+}
+
+.signup.sss input:-ms-input-placeholder{
+    text-transform: uppercase;
+}
+
+.signup .sss input::-ms-input-placeholder {
+    text-transform: uppercase;
+}
+
+.signup .sss input::placeholder {
+    text-transform: uppercase;
+}
+
+.signup .sss input:focus {
+    border-color: #222;
+}
+.signup .action {
+    display:  -webkit-box;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        flex-direction: row;
+}
+
+
+.signup .action button {
+    width: 100%;
+    border: none;
+    padding: 18px;
+    color: white;
+    font-family: 'Rubik', sans-serif ;
+    cursor:  pointer;
+    text-transform: uppercase;
+    background: #778899;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 0;
+    letter-spacing: 0.2px;
+    outline: 0;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+} 
+
+.signup .action button:nth-child(2) {
+    background: #778899;
+    color: #fff;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 4px;
+
+}
+.signup.action button:nth-child(2):hover {
+    background: #778899;
+}

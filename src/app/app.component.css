@@ -1,0 +1,21 @@
+.navbar-menu .navbar-end th {
+        font-size: 25px;
+        font-style: normal;
+        color: black;
+        
+}
+
+
+tr.odd {
+        background: red;
+        color: white;
+    }
+
+    tr.even {
+        background: black;
+        color: white;
+    }
+    
+th {
+        color: darkblue;
+}
