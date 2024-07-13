@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'kuppi';
-
-  myimage:String = "assets/images/png-transparent-abstract-blue-background-wave.png";
+  
+ 
 
   constructor() {}
 

@@ -2,11 +2,12 @@
 * {
     margin: 0;
     padding: 0;
-    max-width: 100%;
+
 }
 
 
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #E8D8D8;
+    background-color:none;
 }
+

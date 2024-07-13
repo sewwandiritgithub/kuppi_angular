@@ -1,10 +1,118 @@
-<body>
-    <div class="signin">
-        <h1>World's Best App</h1>
-        <H2>System for employees in any organization to complain their problems</H2>
-        <div class="back">
-            <button routerLink="/student">Login</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button routerLink="/">Go to admin</button>
+
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+    <!-- Boxicons CSS -->
+    
+  </head>
+  <body>
+    <nav class="sidebar locked">
+      <div class="logo_items flex">
+        <span class="nav_image">
+          <img src="" alt="" />
+        </span>
+        <span class="logo_name">CMS</span>
+        <i class="bx bx-lock-alt" id="lock-icon" title="Unlock Sidebar"></i>
+        <i class="bx bx-x" id="sidebar-close"></i>
+      </div>
+
+      <div class="menu_container">
+        <div class="menu_items">
+          <ul class="menu_item">
+            <div class="menu_title flex">
+              <span class="title">Dashboard</span>
+              <span class="line"></span>
+            </div>
+            <br>
+            <br>
+            <li class="item"> 
+              <a class="navbar-item" routerLink="/header">
+                <span>User Details</span>
+                <span class="line"></span>
+              </a>
+            </li>
+            <br>
+            <br>
+            <li class="item">
+              <a class="navbar-item" routerLink="/signup">
+                <i class="bx bx-grid-alt"></i>
+                <span>Complaint</span>
+                <span class="line"></span>
+              </a>
+            </li>
+            <br>
+            <br>
+            <li class="item">
+              <a class="navbar-item" routerLink="/solution">
+                <i class="bx bx-grid-alt"></i>
+                <span>Solutions</span>
+                <span class="line"></span>
+              </a>
+            </li>
+              </ul>
         </div>
+
+      </div>
+    </nav>
+    <!-- Navbar -->
+    <nav class="navbar flex">
+      <i class="bx bx-menu" id="sidebar-open"></i>
+      <input type="text" placeholder="Search..." class="search_box" />
+      <span class="nav_image">
+        
+      </span>
+    </nav>
+
+   
+   
+  <div class="container">
+    <div class="title">User Details</div>
+    <div class="content">
+      <form action="#">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Fname</span>
+            <input type="text"  placeholder="Enter your Full Name" required>
+            
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="text"   placeholder="Enter your Password" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text"   placeholder="Enter your Email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone_number</span>
+            <input type="text"   placeholder="Enter your Phone Number" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Address</span>
+            <input type="text" placeholder="Enter your Address" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Role</span>
+            <input type="text"   placeholder="Confirm your Role" required>
+          </div>
+        </div>
+        <div class="gender-details">
+          <input type="radio" name="gender" id="dot-1">
+          <input type="radio" name="gender" id="dot-2">
+        </div>
+        <div class="button">
+          <input type="submit" routerLink = "/usertable"  value="save">      
+        </div>
+      </form>
     </div>
+  </div>
 </body>
+</html>
+
+
+
+

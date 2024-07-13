@@ -1,0 +1,103 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+    <!-- Boxicons CSS -->
+    
+  </head>
+  <body>
+    <nav class="sidebar locked">
+      <div class="logo_items flex">
+        <span class="nav_image">
+          
+        </span>
+        <span class="logo_name">CMS</span>
+        <i class="bx bx-lock-alt" id="lock-icon" title="Unlock Sidebar"></i>
+        <i class="bx bx-x" id="sidebar-close"></i>
+      </div>
+
+      <div class="menu_container">
+        <div class="menu_items">
+          <ul class="menu_item">
+            <div class="menu_title flex">
+              <span class="title">Dashboard</span>
+              <span class="line"></span>
+            </div>
+            <br>
+            <br>
+            <li class="item"> 
+              <a class="navbar-item" routerLink="/usertable">
+                <span>User Details</span>
+                <span class="line"></span>
+              </a>
+            </li>
+            <br>
+            <br>
+            <li class="item">
+              <a class="navbar-item" routerLink="/complainttable">
+                <i class="bx bx-grid-alt"></i>
+                <span>Complaint</span>
+                <span class="line"></span>
+              </a>
+            </li>
+            <br>
+            <br>
+            <li class="item">
+              <a class="navbar-item" routerLink="/solution">
+                <i class="bx bx-grid-alt"></i>
+                <span>Solutions</span>
+                <span class="line"></span>
+              </a>
+            </li>
+              </ul>
+        </div>
+
+      </div>
+    </nav>
+    <!-- Navbar -->
+    <nav class="navbar flex">
+      <i class="bx bx-menu" id="sidebar-open"></i>
+      <input type="text" placeholder="Search..." class="search_box" />
+      <span class="nav_image">
+      
+      </span>
+    </nav>
+
+    <div class="container">
+        <div class="title">Complaints</div>
+            <div class="user-details">
+             <table class="ggg">
+                <tr class="aaa">
+                <th>ID</th>
+                <th> Title</th>
+                <th>Type</th>
+                <th>Complaint</th>
+                
+                </tr>
+                <tr> 
+                <th>H0001</th>
+                <th>To increase the salary</th>
+                <th>salary problem</th>
+                <th>Hello sir
+                  , the current salary is not enough</th>
+                <th></th>
+                <th>
+                  <br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;
+                  <div class="button">
+                    <input type="Edit"  value="Edit">
+                  </div>
+                  <br>
+                  <div class="button-2">
+                    <input type="Delete"  value="Delete">
+                  </div>
+                  </th>
+                
+                </tr>
+                <tr> </tr>
+                <tr> </tr>
+                <tr> </tr>
+             </table>
+            </div>

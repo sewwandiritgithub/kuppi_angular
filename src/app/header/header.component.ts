@@ -7,6 +7,18 @@ import { Component, OnInit  } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  UserArray: any[] = [];
+  isResultLoaded = false;
+  isUpdateFormActive = false;
+
+  Fname: String= "";
+  Password: String = "";
+  Email: String ="";
+  Phone_number: String ="";
+  Address: String ="";
+  Role: String ="";
+  currentUserID ="";
+
   constructor() {}
 
   ngOnInit() {

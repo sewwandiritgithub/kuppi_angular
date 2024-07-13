@@ -1,27 +1,93 @@
-<body>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+    <!-- Boxicons CSS -->
+    
+  </head>
+  <body>
+    <nav class="sidebar locked">
+      <div class="logo_items flex">
+        <span class="nav_image">
+        </span>
+        <span class="logo_name">CMS</span>
+        <i class="bx bx-lock-alt" id="lock-icon" title="Unlock Sidebar"></i>
+        <i class="bx bx-x" id="sidebar-close"></i>
+      </div>
+
+      <div class="menu_container">
+        <div class="menu_items">
+          <ul class="menu_item">
+            <div class="menu_title flex">
+              <span class="title">Dashboard</span>
+              <span class="line"></span>
+            </div>
+            <br>
+            <br>
+            <li class="item"> 
+              <a class="navbar-item" routerLink="/header">
+                <span>User Details</span>
+                <span class="line"></span>
+              </a>
+            </li>
+            <br>
+            <br>
+            <li class="item">
+              <a class="navbar-item" routerLink="/signup">
+                <i class="bx bx-grid-alt"></i>
+                <span>Complaint</span>
+                <span class="line"></span>
+              </a>
+            </li>
+            <br>
+            <br>
+            <li class="item">
+              <a class="navbar-item" routerLink="/solution">
+                <i class="bx bx-grid-alt"></i>
+                <span>Solutions</span>
+                <span class="line"></span>
+              </a>
+            </li>
+              </ul>
+        </div>
+
+      </div>
+    </nav>
+    <!-- Navbar -->
+    <nav class="navbar flex">
+      <i class="bx bx-menu" id="sidebar-open"></i>
+      <input type="text" placeholder="Search..." class="search_box" />
+      <span class="nav_image">
+      </span>
+    </nav>
+
+   
+    <!-- Navbar -->
+    
+    
+
     <div class="signup">
     <form>
-        <h1> Sign Up</h1>
-        &nbsp;&nbsp;<h4> Register Yourself</h4>
+        <h1> Complaint</h1>
+        &nbsp;&nbsp;<h4> Complaint Form</h4>
         <div class="abc">
         <div class="sss">
-            <label for="exampleInputfullname" class="from-lable"> Full Name</label>
+            <label for="exampleInputTitle" class="from-lable"> Title</label>
             <input type="text" class="form-control" id="exampleInputfullname">
         </div>
         <div class="sss">
-            <label for="exampleInputmobilenumber" class="from-lable">Mobile Number</label>
-            <input type="number" class="form-control" id="exampleInputmobilenumber">
+            <label for="exampleInputType" class="from-lable">Type</label>
+            <input type="text" class="form-control" id="exampleInputmobilenumber">
         </div>
         <div class="sss">
-            <label for="exampleInputemail" class="from-lable">Email</label>
-            <input type="email" class="form-control" id="exampleInputemail">
-        </div>
-        <div class="sss">
-            <label for="exampleInputpassword" class="from-lable">Password</label>
-            <input type="password" class="form-control" id="exampleInputpassword">
+            <label for="exampleInputDescription" class="from-lable">Your Complaint</label>
+            <textarea class="ggg"></textarea>
         </div>
         <div class="action">
-        <button> Sign Up</button>
+        <button routerLink="/test"> Submit</button>
         </div>
         </div>
 
@@ -29,7 +95,5 @@
 
     </div>
 
-
-
-
 </body>
+</html>
