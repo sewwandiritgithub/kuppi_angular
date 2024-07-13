@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const mysql = require("mysql");
+const sql = require("mssql");
 const server = express();
 server.use(bodyParser.json());
 
@@ -9,19 +9,27 @@ server.use(bodyParser.json());
 server.use(bodyParser.urlencoded({ extended: true }));
 
 // Establish the database connection
-const db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "dbuser",
-});
-
-db.connect(function (error) {
-    if (error) {
-        console.log("Error connecting to DB:", error);
-    } else {
-        console.log("Successfully connected to DB");
+const dbConfig = {
+    user: 'sqlserver',
+    password: 'hiruni@12',
+    server: '34.121.251.34', 
+    database: 'hiruni',
+    options: {
+        encrypt: true, // for azure
+        trustServerCertificate: true // change to true for local dev / self-signed certs
     }
+};
+
+
+// Establish the database connection
+sql.connect(dbConfig).then(pool => {
+    if(pool.connecting) {
+        console.log("Connecting to the database...");
+    } else if(pool.connected) {
+        console.log("Successfully connected to the database.");
+    }
+}).catch(error => {
+    console.error("Error connecting to the database:", error);
 });
 
 
@@ -31,26 +39,29 @@ server.get('/', (req, res) => {
 });
 
 // Define a route to get all users (example)
-server.get('/user', (req, res) => {
-    const query = "SELECT * FROM user";
-    db.query(query, (error, results) => {
-        if (error) {
-            return res.status(500).send(error);
-        }
-        res.json(results);
-    });
+server.get('/user', async (req, res) => {
+    try {
+        const pool = await sql.connect(dbConfig);
+        const result = await pool.request().query("SELECT * FROM user");
+        res.json(result.recordset);
+    } catch (error) {
+        res.status(500).send(error.message);
+    }
 });
 
 // Define a route to add a new user (example)
-server.post('/user', (req, res) => {
-    const user = req.body;
-    const query = "INSERT INTO user (name, email) VALUES (?, ?)";
-    db.query(query, [user.name, user.email], (error, results) => {
-        if (error) {
-            return res.status(500).send(error);
-        }
+server.post('/user', async (req, res) => {
+    const { name, email } = req.body;
+    try {
+        const pool = await sql.connect(dbConfig);
+        const result = await pool.request()
+            .input('name', sql.VarChar, name)
+            .input('email', sql.VarChar, email)
+            .query("INSERT INTO user (name, email) VALUES (@name, @email)");
         res.status(201).send('User added successfully');
-    });
+    } catch (error) {
+        res.status(500).send(error.message);
+    }
 });
 
 // Start the server on a different port
